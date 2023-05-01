@@ -14,4 +14,4 @@ jobs:
           distribution: "adopt"
           java-version: 16
       - name: clean build
-        run: ./gradlew clean test --info --stacktrace
+        run: C:\Users\enesk\privates zeug\Downloads\webtech.zip\webtech\gradle\wrapper\gradlew clean test --info --stacktrace
