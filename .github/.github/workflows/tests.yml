@@ -2,6 +2,8 @@ name: tests
 
 on:
   push:
+    branches:
+      - '*'
 
 jobs:
   test:
@@ -14,4 +16,4 @@ jobs:
           distribution: "adopt"
           java-version: 16
       - name: clean build
-        run: C:\Users\enesk\privates zeug\Downloads\webtech.zip\webtech\gradle\wrapper\gradlew clean test --info --stacktrace
+        run: ./gradlew clean test --info --stacktrace
