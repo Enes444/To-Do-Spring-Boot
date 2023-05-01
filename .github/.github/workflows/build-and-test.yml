@@ -1,12 +1,9 @@
-name: tests
+name: build-and-test
 
-on:
-  push:
-    branches:
-      - '*'
+on: [push]
 
 jobs:
-  test:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,5 +12,5 @@ jobs:
         with:
           distribution: "adopt"
           java-version: 16
-      - name: clean build
-        run: ./gradlew clean test --info --stacktrace
+      - name: Build and test
+        run: ./gradlew build --info --stacktrace
